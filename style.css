@@ -4,11 +4,12 @@
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
+  background: #292b2e;
 }
 
 nav {
   height: 40px;
-  background: #4f5c63;
+  background: #292b2e;
   display: flex;
   align-items: center;
   padding: 0rem calc((100vw - 1300px) / 2);
@@ -32,16 +33,16 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
   padding: 0 1.5rem;
 }
 
 nav a:hover {
-  color: #fff;
+  color: #045ffd;
 }
 
 .hero {
-  background: #4f5c63;
+  background: #292b2e;
 }
 
 .hero-container {
@@ -74,15 +75,14 @@ button {
   padding: 1rem 3rem;
   font-size: 1rem;
   border: none;
-  color: #4f5c63;
+  color: #292b2e;
   background: #000;
   cursor: pointer;
   border-radius: 50px;
 }
 
 button:hover {
-  background: #fff;
-  color: #000;
+  color: #fff;
 }
 
 .column-right {
@@ -92,13 +92,54 @@ button:hover {
   padding: 0rem 2rem;
 }
 
-.hero-image {
-  width: 50%;
-  height: 100%;
+.main-image {
+  width: 500px;
+}
+
+.services-image {
+  width: 300px;
 }
 
 @media screen and (max-width: 768px) {
   .hero-container {
     grid-template-columns: 1fr;
   }
+}
+
+.flexbox-container {
+  display: flex;
+  justify-content: space-around;
+  color: #fff;
+}
+
+.flexbox-item {
+  display: flex;
+  margin: 10px;
+  justify-content: space-around;
+  padding: 1em;
+}
+
+.flexbox-item-1 {
+  display: flex;
+  min-height: 100px;
+  width: 45%;
+  flex: 1;
+  margin: 0.6em;
+}
+
+.flexbox-item-2 {
+  min-height: 200px;
+  width: 45%;
+}
+
+.service-price {
+  flex: 1;
+  margin: auto;
+  text-align: center;
+}
+
+.service-pic {
+  flex: 1;
+  text-align: right;
+  margin: auto;
 }
