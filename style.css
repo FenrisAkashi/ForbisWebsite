@@ -120,6 +120,15 @@ button:hover {
   align-items: center;
 }
 
+.about-container {
+  color: #fff;
+  text-align: center;
+  //border: 3px solid black;
+  width: 70%;
+  margin: auto;
+  padding: 2rem 0;
+}
+
 .flexbox-item {
   display: flex;
   margin: 10px;
