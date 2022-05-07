@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forbis</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo"> </div>
+      <div class="nav-items">
+        <a href="home.html">Home</a> <a href="about.html">About</a> <a href="services.html">Services</a> <a href="gallery.html">Gallery</a> <a href="reviews.html">Reviews</a> <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+    <div class="img-bar">
+          <img
+            src="./images/main_car2.png"
+            alt="illustration"
+            class="main-image"
+          />
+    </div>
+    <div class="title-bar"><h1>Forbis Auto Detailing</h1></div>
+    <div class="gallery">           <!--container-->
+        <div class="gallery-box">   <!--image-container-->
+            <img src="./images/resized/img1.jpg"
+                 alt="illustration"
+                 class="gallery-image" />
+            <img src="./images/resized/img2.jpg"
+                 alt="illustration"
+                 class="gallery-image" />
+            <img src="./images/resized/img3.jpg"
+                 alt="illustration"
+                 class="gallery-image" />
+            <img src="./images/resized/img4.jpg"
+                 alt="illustration"
+                 class="gallery-image" />
+
+            <div class="popup-image">
+                <span>&times;</span>
+                <img src="images/resized/img1.jpg" alt="" />
+            </div>
+
+            <img src="./gallery/1.jpg"
+                 alt="illustration"
+                 class="gallery-image" />
+            <img src="./gallery/img1.jpg"
+                 alt="illustration"
+                 class="gallery-image" />
+            <img src="./gallery/img2.jpg"
+                 alt="illustration"
+                 class="gallery-image" />
+            <img src="./gallery/img3.jpg"
+                 alt="illustration"
+                 class="gallery-image" />
+            <img src="./gallery/img4.jpg"
+                 alt="illustration"
+                 class="gallery-image" />
+            <img src="./gallery/img5.jpg"
+                 alt="illustration"
+                 class="gallery-image" />
+            <img src="./gallery/img6.jpg"
+                 alt="illustration"
+                 class="gallery-image" />
+            <img src="./gallery/img7.jpg"
+                 alt="illustration"
+                 class="gallery-image" />
+            <img src="./gallery/img8.jpg"
+                 alt="illustration"
+                 class="gallery-image" />
+            <img src="./gallery/img9.jpg"
+                 alt="illustration"
+                 class="gallery-image" />
+            <img src="./gallery/img10.jpg"
+                 alt="illustration"
+                 class="gallery-image" />
+            <img src="./gallery/img11.jpg"
+                 alt="illustration"
+                 class="gallery-image" />
+            <img src="./gallery/img12.jpg"
+                 alt="illustration"
+                 class="gallery-image" />
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.gallery-box img').forEach(image => {
+            image.onclick = () => {
+                document.querySelector('.popup-image').style.display = 'block';
+                document.querySelector('.popup-image img').src = image.getAttribute('src');
+
+            }
+        });
+        document.querySelector('.popup-image span').onclick = () => {
+            document.querySelector('.popup-image').style.display = 'none';
+        }
+    </script>
+
+  </body>
+</html>

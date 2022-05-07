@@ -109,6 +109,9 @@ button:hover {
   .hero-container {
     grid-template-columns: 1fr;
   }
+  .popup-image img{
+      width: 95%;
+  }
 }
 
 .flexbox-container {
@@ -158,4 +161,75 @@ button:hover {
   flex: 1;
   text-align: right;
   margin: auto;
+}
+
+
+.gallery {
+    display: flex;
+    //align-content: center;
+    //align-items: center;
+    justify-content: center;
+    //border: 5px solid white;
+    //margin: auto;
+    //width: 95%;
+    //flex-wrap: wrap;
+    position: relative;
+    min-height: 100vh;
+}
+
+
+.gallery-box {
+    //border: 5px solid blue;
+    width: 92%;
+    //margin: auto;
+    justify-content: center;
+    //display: flex;
+    //flex-wrap: wrap;
+    //gap: 15px;
+    //padding: 10px;
+}
+
+.gallery-image {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    padding: 0.5em;
+    transition: 1s;
+}
+
+.gallery-image:hover {
+    filter: grayscale(100%);
+    transform: scale(1.1);
+}
+
+.popup-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image img{
+    position: absolute;
+    top:50%; left:50%;
+    transform: translate(-50%,-50%);
+    border: 5px solid #fff;
+    border-radius: 5px;
+    max-height: 90%;
+    max-width: 90%;
+    object-fit: cover;
+}
+
+.popup-image span{
+    position: absolute;
+    top:0; right:10px;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
 }
