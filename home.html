@@ -51,7 +51,7 @@
             </div>
             <br>
             <div class="form-validation">
-              <input type="phoneNumber" class="modal-input" id="phoneNumber" name="phoneNumber" placeholder="Phone number">
+              <input type="phoneNumber" class="modal-input" id="phoneNumber" name="phoneNumber" placeholder="Phone number (optional)">
               <p>Error Message</p>
             </div>
             <br>
@@ -140,7 +140,7 @@
       form.addEventListener('submit', (e) => {
 	    e.preventDefault();
 
-	    checkRequired([name,phoneNumber,email,message]);
+	    checkRequired([name,email,message]);
       })
       
     </script>
