@@ -90,6 +90,11 @@ button {
   border-radius: 50px;
 }
 
+button a {
+  text-decoration: none;
+  color: white;
+}
+
 button:hover {
   color: #045ffd;
 }
