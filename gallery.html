@@ -20,8 +20,9 @@
             class="main-image"
           />
     </div>
-    <div class="title-bar"><h1>Forbis Auto Detailing</h1></div>
-    <div class="gallery">           <!--container-->
+    <div class="hero-container">
+      <div class="title-bar"><h1>Forbis Auto Detailing</h1></div><br>
+      <div class="gallery">           <!--container-->
         <div class="gallery-box">   <!--image-container-->
             <img src="./images/resized/img1.jpg"
                  alt="illustration"
@@ -81,6 +82,7 @@
                  alt="illustration"
                  class="gallery-image" />
         </div>
+      </div>
     </div>
 
     <script>
@@ -88,7 +90,6 @@
             image.onclick = () => {
                 document.querySelector('.popup-image').style.display = 'block';
                 document.querySelector('.popup-image img').src = image.getAttribute('src');
-
             }
         });
         document.querySelector('.popup-image span').onclick = () => {
