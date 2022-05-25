@@ -16,9 +16,8 @@ about.html: Needs the quote button working
 services.html: Done unless services need to be changed or added.
 gallery.html: Just needs all of the images resized to fit properly. Largest square
 proportions and then resize to 500 x 500 pixels.
-reviews.html: Nothing done on this yet. Would like to be able to connect to google reviews
-and pull them in somehow.
-contact.html: Need quote, call, and directions buttons to work.
+reviews.html: Google reviews embeded using elfsight. Need to discuss options w/Forbis.
+contact.html: Need quote button to work.
 
 Perhaps add his logo to all of the pages.
 
