@@ -52,6 +52,10 @@ nav a:hover {
   min-height: 95vh;
   padding: 3rem calc((100vw - 1300px) / 2);
   background: #292b2e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .column-center {
@@ -330,3 +334,10 @@ button:hover {
     z-index: 100;
 }
 
+.reviews-container {
+    border: 3px solid black;
+    background-color: white;
+    margin-top: 2rem;
+    max-width: fit-content;
+    padding: 2rem;
+}
