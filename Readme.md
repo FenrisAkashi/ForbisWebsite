@@ -29,3 +29,7 @@ only way to know this is working, is to run it as an actual webpage. This may ha
 left for last if I cannot find an alternative that works using html files.
 I might be able to take care of this using github pages: 
 https://www.youtube.com/watch?v=8hrJ4oN1u_8&ab_channel=ProgrammingKnowledge
+
+Tried to find the font of the logo without success. Can find similar fonts using: https://www.myfonts.com/WhatTheFont/
+
+Might attempt a switch for users between light/dark mode. Not everyone likes dark mode.
