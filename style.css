@@ -54,8 +54,21 @@ nav a:hover {
   background: #292b2e;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  //justify-content: center;
   align-items: center;
+  //border: 3px solid pink;
+}
+
+.hero-container2 {
+  //height: 95vh;
+  min-height: 95vh;
+  padding: 2rem;
+  background: #292b2e;
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  align-items: center;
+  //border: 3px solid pink;
 }
 
 .column-center {
@@ -65,7 +78,7 @@ nav a:hover {
   align-items: center;
   color: white;
   padding: 0rem 2rem;
-  //background: #292b2e;
+  //border: 3px solid red;
 }
 
 .column-center h1 {
@@ -103,14 +116,14 @@ button a:hover {
   color: #045ffd;
 }
 
-[type="submit"] {
-  text-decoration: none;
-  color: white;
-  background: none;
-  font-size: 1rem;
+[value="Get Directions"] {
+    text-decoration: none;
+    color: white;
+    background: none;
+    font-size: 1rem;
 }
 
-[type="submit"]:hover {
+[value="Get Directions"]:hover {
   color: #045ffd;
 }
 
@@ -158,8 +171,8 @@ button:hover {
   text-align: center;
   //border: 3px solid black;
   width: 70%;
-  margin: auto;
-  padding: 2rem 0;
+  //margin: auto;
+  //padding: 2rem 0;
   //background: #292b2e;
 }
 

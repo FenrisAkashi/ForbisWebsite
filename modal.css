@@ -7,8 +7,11 @@
 	--white: #fff;
 	--lightred: #f9433dcc;
 	--lightblue: #337AF1;
-	//mine
+
 	--hoverColor: #045ffd;
+	--darkred: #782c2c;
+	--gray: #475366;
+	--bluegray: #2c4978;
 }
 
 * {
@@ -81,14 +84,14 @@ nav a:hover {
 
 .close-btn:hover {
 	cursor: pointer;
-	color: var(--brightred);
+	//color: var(--brightred);
 	transition: 0.2s ease-out;
 }
 
 .modal-content-left {
 	//background: linear-gradient(90deg, rgba(247,74,70,1) 0%, rgba(236,43,0,1) 100%);
-	background: linear-gradient(90deg, rgb(4, 95, 253, 1) 0%, rgba(15,126,255,1) 100%);
-
+	//background: linear-gradient(90deg, rgb(4, 95, 253, 1) 0%, rgba(15,126,255,1) 100%);
+	background: var(--bluegray);
 	border-radius: 0 3px 3px 0;
 	position: relative;
 }
@@ -179,7 +182,7 @@ nav a:hover {
 	width: 80%;
 	height: 2rem;
 	border-radius: 2px;
-	background-color: var(--lightblue);
+	background-color: var(--bluegray);
 	outline: none;
 	border: none;
 	color: var(--white);
@@ -188,7 +191,7 @@ nav a:hover {
 
 .modal-input-btn:hover {
 	cursor: pointer;
-	background-color: var(--brightred);
+	background-color: var(--darkred);
 	transition: all 0.4s ease-out;
 }
 
