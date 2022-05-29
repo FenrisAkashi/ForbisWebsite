@@ -7,44 +7,155 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
-      <div class="logo"> </div>
-      <div class="nav-items">
-        <a href="home.html">Home</a> <a href="about.html">About</a> <a href="services.html">Services</a> <a href="gallery.html">Gallery</a> <a href="reviews.html">Reviews</a> <a href="contact.html">Contact</a>
+      <nav>
+          <div class="logo"> </div>
+          <div class="nav-items">
+              <a href="home.html">Home</a> <a href="about.html">About</a> <a href="services.html">Services</a> <a href="gallery.html">Gallery</a> <a href="reviews.html">Reviews</a> <a href="contact.html">Contact</a>
+          </div>
+      </nav>
+      <div class="img-bar">
+          <img src="./images/main_car2.png"
+               alt="illustration"
+               class="main-image" />
       </div>
-    </nav>
-    <div class="img-bar">
-          <img
-            src="./images/main_car2.png"
-            alt="illustration"
-            class="main-image"
-          />
-    </div>
-    <div class="hero-container2">
-      <div class="column-center">
-        <h1>Forbis Auto Detailing</h1>
-        <p>Auto / Marine / RV Detailing Service</p>
+      <div class="hero-container2">
+          <div class="column-center">
+              <h1>Forbis Auto Detailing</h1>
+              <p>Auto / Marine / RV Detailing Service</p>
+          </div>
+          <div class="about-container">
+              <p>Text or call (360) 566-5297</p>
+              <br>
+              <!--button>Call Now</button-->
+              <button class="call-btn"><a href="tel:13609100078">Call Now</a></button>
+              <br><br><br>
+              <p>Get a quote via e-mail</p>
+              <br>
+              <button class="quote-btn">Get Quote</button>
+              <br><br><br>
+              <p>11301 NE 7th St<br>Vancouver, WA 98684</p>
+              <br>
+              <!--button>Get Directions</button-->
+              <button>
+                  <form action="http://maps.google.com/maps" method="get" target="_blank">
+                      <input type="hidden" name="daddr" value="Autumn Chase Apartments Vancouver 98684" />
+                      <a><input type="submit" value="Get Directions" /></a>
+                  </form>
+              </button>
+          </div>
       </div>
-      <div class="about-container">
-        <p>Text or call (360) 566-5297</p>
-        <br>
-        <!--button>Call Now</button-->
-        <button class="call-btn"><a href="tel:13609100078">Call Now</a></button>
-        <br><br><br>
-        <p>Get a quote via e-mail</p>
-        <br>
-        <button>Get Quote</button>
-        <br><br><br>
-        <p>11301 NE 7th St<br>Vancouver, WA 98684</p>
-        <br>
-        <!--button>Get Directions</button-->
-        <button>
-          <form action="http://maps.google.com/maps" method="get" target="_blank">
-              <input type="hidden" name="daddr" value="Autumn Chase Apartments Vancouver 98684"/>
-              <a><input type="submit" value="Get Directions"/></a>
-          </form>
-        </button>
+
+      <!--Modal-->
+
+      <div class="modal" id="email-modal">
+          <div class="modal-content">
+              <span class="close-btn">&times;</span>
+              <div class="modal-content-left">
+                  <img id="modal-img" src="./images/logo2.jfif" alt="illustration">
+              </div>
+              <div class="modal-content-right">
+                  <form action="/" method="GET" class="modal-form" id="form">
+                      <h1>Get Quote</h1>
+                      <br>
+                      <div class="form-validation">
+                          <input type="text" class="modal-input" id="name" name="name" placeholder="Name">
+                          <p>Error Message</p>
+                      </div>
+                      <br>
+                      <div class="form-validation">
+                          <input type="phoneNumber" class="modal-input" id="phoneNumber" name="phoneNumber" placeholder="Phone number (optional)">
+                          <p>Error Message</p>
+                      </div>
+                      <br>
+                      <div class="form-validation">
+                          <input type="email" class="modal-input" id="email" name="email" placeholder="Email">
+                          <p>Error Message</p>
+                      </div>
+                      <br>
+                      <div class="form-validation">
+                          <input type="message" class="modal-input" id="message" name="message" placeholder="How can we help you?">
+                          <p>Error Message</p>
+                      </div>
+                      <br>
+                      <input type="submit" class="modal-input-btn" value="Send Message">
+                  </form>
+              </div>
+          </div>
       </div>
-    </div>
+
+      <script>
+        //modal items
+        const modal = document.getElementById('email-modal');
+        const openBtn = document.querySelector('.quote-btn');
+        const closeBtn = document.querySelector('.close-btn');
+
+        //Click events
+        openBtn.addEventListener('click', () => {
+            modal.style.display = 'block';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        //Form validation
+        const form = document.getElementById('form');
+        const name = document.getElementById('name');
+        const phoneNumber = document.getElementById('phoneNumber');
+        const email = document.getElementById('email');
+        const message = document.getElementById('message');
+
+        //Show error message
+        function showError(input, message) {
+            const formValidation = input.parentElement;
+            formValidation.className = 'form-validation error';
+
+            const errorMessage = formValidation.querySelector('p');
+            errorMessage.innerText = message;
+        }
+
+        //Show valid message
+        function showValid(input) {
+            const formValidation = input.parentElement;
+            formValidation.className = 'form-validation valid';
+        }
+
+        //Check required fields
+        function checkRequired(inputArr) {
+            inputArr.forEach(function (input) {
+                if (input.value.trim() === '') {
+                    showError(input, `${getFieldName(input)} is required`);
+                } else {
+                    showValid(input);
+                }
+            })
+        }
+
+        //Get Fieldname
+        function getFieldName(input) {
+            if (input === phoneNumber) {
+                input = 'Phone Number';
+                return input;
+            }
+            else {
+                return input.name.charAt(0).toUpperCase() + input.name.slice(1);
+            }
+        }
+
+        //Event Listeners
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            checkRequired([name, email, message]);
+        })
+
+      </script>
+
   </body>
 </html>
