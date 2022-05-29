@@ -12,12 +12,14 @@ How to Host a Website On Github:
 Resize images at: https://resizeimage.net/
 
 home.html (main/landing page): Needs the quote button pop up form to actually submit an email.
-about.html: Needs the quote button working
+about.html: Needs the quote button pop up form to actually submit an email.
 services.html: Done unless services need to be changed or added.
 gallery.html: Just needs all of the images resized to fit properly. Largest square
 proportions and then resize to 500 x 500 pixels.
 reviews.html: Google reviews embeded using elfsight. Need to discuss options w/Forbis.
-contact.html: Need quote button to work.
+contact.html: Needs the quote button pop up form to actually submit an email.
+
+Need to check all pages and functions on other browsers, and if possible on mobile devices. 
 
 Perhaps add his logo to all of the pages.
 
