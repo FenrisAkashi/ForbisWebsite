@@ -14,8 +14,7 @@ Resize images at: https://resizeimage.net/
 home.html (main/landing page): Needs the quote button pop up form to actually submit an email.
 about.html: Needs the quote button pop up form to actually submit an email.
 services.html: Done unless services need to be changed or added.
-gallery.html: Just needs all of the images resized to fit properly. Largest square
-proportions and then resize to 500 x 500 pixels.
+gallery.html: Just need to have Forbis decide which ones should be removed if any.
 reviews.html: Google reviews embeded using elfsight. Need to discuss options w/Forbis.
 contact.html: Needs the quote button pop up form to actually submit an email.
 
