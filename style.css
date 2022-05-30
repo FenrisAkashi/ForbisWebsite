@@ -293,13 +293,28 @@ button:hover {
 
 .gallery-box {
     //border: 5px solid blue;
-    width: 92%;
+    //width: 100%;
+    max-width: 92%;
+    //min-width: fit-content;
+    //min-width: 92%;
+    //width: auto;
+    //width: fit-content;
+    //width: max-content;
     //margin: auto;
-    justify-content: center;
+    //justify-content: center;
+    //align-content: center;
+    //align-items: center;
+    //align-items: safe center;
+    //align-items: unsafe center;
     //display: flex;
     //flex-wrap: wrap;
+    //flex-direction: row;
     //gap: 15px;
     //padding: 10px;
+    //flex-basis: auto;
+    //flex-shrink: 1;
+    //display: inline-flex;
+    //align-self: center;
 }
 
 .gallery-image {
@@ -308,6 +323,8 @@ button:hover {
     margin: auto;
     padding: 0.5em;
     transition: 1s;
+    //border: 5px solid red;
+    cursor: pointer;
 }
 
 .gallery-image:hover {
