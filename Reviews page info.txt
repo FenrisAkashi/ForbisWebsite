@@ -1,0 +1,13 @@
+Google ID: ChIJQYVoDrqllVQRhWQ3AqC7j-8
+
+Elfsight - $60/year (was able to get a coupon for first payment, set on auto renewal w/his card)
+username: forbistemp
+password: yrjC(Nh&&WlzL&#5 
+
+Gave me this code to embed in my html:
+<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-f30df8fd-17bb-469e-a5db-54690b159745"></div>
+
+
+If he ever wants to switch to having a button linked to google reviews for free, the direct url to the google reviews wanted:
+https://search.google.com/local/reviews?placeid=ChIJQYVoDrqllVQRhWQ3AqC7j-8
