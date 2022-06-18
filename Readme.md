@@ -1,31 +1,59 @@
 //Readme file
-//work in progress
+
 
 His Facebook page: https://www.facebook.com/ForbiisAutoDetail
-Website he made to hold his web address: https://forbisautodetail.com
-
-How to add a custom domain on Github pages:
-      https://www.youtube.com/watch?v=mPGi1IHQxFM&ab_channel=ProgrammingKnowledge 
-How to Host a Website On Github:
-      https://www.youtube.com/watch?v=8hrJ4oN1u_8&ab_channel=ProgrammingKnowledge
 
 Resize images at: https://resizeimage.net/
 
-home.html (main/landing page): Needs the quote button pop up form to actually submit an email.
-about.html: Needs the quote button pop up form to actually submit an email.
-services.html: Done unless services need to be changed or added.
-gallery.html: Just need to have Forbis decide which ones should be removed if any.
-reviews.html: Google reviews embeded using elfsight. Forbis paid for full year, on auto renewal w/his cc.
-contact.html: Needs the quote button pop up form to actually submit an email. Removed the website with directions, kept original file in backup folder.
-thankyou.html: Just needs to be connected to from the send message button once form submits.
+reviews.html: Google reviews embeded using elfsight. 
 
-Need to check all pages and functions on other browsers, and if possible on mobile devices. 
+Hosting through github or hostinger free account disables the formsubmit (getting emails from customers).
+Currently being hosted through Hostinger
 
-The quote button pop up form: I created a temp.html and thankyou.html page in an attempt to
-figure out actually sending an email, however this was done using formsubmit.co and when I
-tried to submit it had this error message: "UNABLE TO SUBMIT FORM - Make sure you open this
-page through a web server, FormSubmit will not work in pages browsed as HTML files". So the
-only way to know this is working, is to run it as an actual webpage. This may have to be
-left for last if I cannot find an alternative that works using html files.
-I might be able to take care of this using github pages: 
-https://www.youtube.com/watch?v=8hrJ4oN1u_8&ab_channel=ProgrammingKnowledge
+The backup folder contains a version of the contact page with his address and a button that takes the user to google maps for directions. He doesn't want to use this feature until he is operating in a place that is not an apartment complex.
+
+Changed index.html to home.html and rerouted default page in htaccess file to home.html. I was able to make urls not display .html at the end.
+
+
+
+Reviews page info:
+Google ID: ChIJQYVoDrqllVQRhWQ3AqC7j-8
+
+Elfsight - $60/year (was able to get a coupon for first payment, set on auto renewal w/his card)
+username: forbistemp
+password: yrjC(Nh&&WlzL&#5 
+
+Gave me this code to embed in my html:
+<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-f30df8fd-17bb-469e-a5db-54690b159745"></div>
+
+If he ever wants to switch to having a button linked to google reviews for free, the direct url to the google reviews wanted:
+https://search.google.com/local/reviews?placeid=ChIJQYVoDrqllVQRhWQ3AqC7j-8
+
+
+
+Separate JS file issues:
+Didn't try to do this...
+
+Wanted to make a separate app.js file for the script but it would no longer work.
+Feeling like this may only work once the website is up and running, and for now need to have the script on each page it's needed.
+
+Once it's online, try adding this line to the head section of the page:
+<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script-->
+
+Then add this at the end of (inside of) the body section:
+<!--script type="text/javascript" src="app.js"></script-->
+
+
+
+Browser Checklist:
+on laptop - 
+google chrome
+firefox
+waterfox
+opera - worked after he activated it
+edge
+
+on phone - 
+chrome
+safari - worked after activation

@@ -10,7 +10,7 @@
       <nav>
           <div class="logo"> </div>
           <div class="nav-items">
-              <a href="home.html">Home</a> <a href="about.html">About</a> <a href="services.html">Services</a> <a href="gallery.html">Gallery</a> <a href="reviews.html">Reviews</a> <a href="contact.html">Contact</a>
+              <a href="home">Home</a> <a href="about">About</a> <a href="services">Services</a> <a href="showroom">Gallery</a> <a href="reviews">Reviews</a> <a href="contact">Contact</a>
           </div>
       </nav>
       <div class="img-bar">
@@ -20,14 +20,13 @@
       </div>
       <div class="hero-container2">
           <div class="column-center">
-              <h1>Forbis Auto Detailing</h1>
+              <h1>Forbis Auto Detail</h1>
               <p>Auto / Marine / RV Detailing Service</p>
           </div>
           <div class="about-container">
               <p>Text or call (360) 566-5297</p>
               <br>
-              <!--button>Call Now</button-->
-              <button class="call-btn"><a href="tel:13609100078">Call Now</a></button>
+              <button class="call-btn"><a href="tel:13605665297">Call Now</a></button>
               <br><br><br>
               <p>Get a quote via e-mail</p>
               <br>
@@ -42,33 +41,32 @@
           <div class="modal-content">
               <span class="close-btn">&times;</span>
               <div class="modal-content-left">
-                  <img id="modal-img" src="./images/logo2.jfif" alt="illustration">
+                  <img id="modal-img" src="./images/logo3.jfif" alt="illustration">
               </div>
               <div class="modal-content-right">
-                  <form action="/" method="GET" class="modal-form" id="form">
-                      <h1>Get Quote</h1>
-                      <br>
-                      <div class="form-validation">
-                          <input type="text" class="modal-input" id="name" name="name" placeholder="Name">
-                          <p>Error Message</p>
-                      </div>
-                      <br>
-                      <div class="form-validation">
-                          <input type="phoneNumber" class="modal-input" id="phoneNumber" name="phoneNumber" placeholder="Phone number (optional)">
-                          <p>Error Message</p>
-                      </div>
-                      <br>
-                      <div class="form-validation">
-                          <input type="email" class="modal-input" id="email" name="email" placeholder="Email">
-                          <p>Error Message</p>
-                      </div>
-                      <br>
-                      <div class="form-validation">
-                          <input type="message" class="modal-input" id="message" name="message" placeholder="How can we help you?">
-                          <p>Error Message</p>
-                      </div>
-                      <br>
-                      <input type="submit" class="modal-input-btn" value="Send Message">
+                  <form action="https://formsubmit.co/d86e729efed0bf8ca45049386b502840" method="POST" class="modal-form">
+                    <h1>Get Quote</h1>
+                    <br>
+                    <div class="form-validation">
+                      <input type="text" class="modal-input" id="name" name="name" placeholder="Name" required>
+                    </div>
+                    <br>
+                    <div class="form-validation">
+                      <input type="phoneNumber" class="modal-input" id="phoneNumber" name="phoneNumber" placeholder="Phone number (optional)">
+                    </div>
+                    <br>
+                    <div class="form-validation">
+                      <input type="email" class="modal-input" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <br>
+                    <div class="form-validation">
+                      <textarea name="message" class="modal-input" id="message" rows="5" cols="20" placeholder="How can we help you?" required></textarea>
+                    </div>
+                    <br>
+                    <input type="submit" class="modal-input-btn" value="Send Message">
+                    <input type="hidden" name="_subject" value="new message!">
+                    <input type="hidden" name="_next" value="https://forbisautodetail.com/thankyou">
+                    <input type="hidden" name="_captcha" value="false">
                   </form>
               </div>
           </div>
@@ -94,57 +92,6 @@
                 modal.style.display = 'none';
             }
         });
-
-        //Form validation
-        const form = document.getElementById('form');
-        const name = document.getElementById('name');
-        const phoneNumber = document.getElementById('phoneNumber');
-        const email = document.getElementById('email');
-        const message = document.getElementById('message');
-
-        //Show error message
-        function showError(input, message) {
-            const formValidation = input.parentElement;
-            formValidation.className = 'form-validation error';
-
-            const errorMessage = formValidation.querySelector('p');
-            errorMessage.innerText = message;
-        }
-
-        //Show valid message
-        function showValid(input) {
-            const formValidation = input.parentElement;
-            formValidation.className = 'form-validation valid';
-        }
-
-        //Check required fields
-        function checkRequired(inputArr) {
-            inputArr.forEach(function (input) {
-                if (input.value.trim() === '') {
-                    showError(input, `${getFieldName(input)} is required`);
-                } else {
-                    showValid(input);
-                }
-            })
-        }
-
-        //Get Fieldname
-        function getFieldName(input) {
-            if (input === phoneNumber) {
-                input = 'Phone Number';
-                return input;
-            }
-            else {
-                return input.name.charAt(0).toUpperCase() + input.name.slice(1);
-            }
-        }
-
-        //Event Listeners
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            checkRequired([name, email, message]);
-        })
 
       </script>
 

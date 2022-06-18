@@ -1,17 +1,16 @@
 :root {
+	--brightred: #F9423D;
+	--bluegray: #2c4978;
+	--lightgray: #b1b1b1;
+	--darkred: #782c2c;
+
+
+	
 	--errorColor: #f00e0e;
 	--validColor: #0add0a;
-	--darkgray: #212329;
-	--lightgray: #b1b1b1;
-	--brightred: #F9423D;
+	
+	
 	--white: #fff;
-	--lightred: #f9433dcc;
-	--lightblue: #337AF1;
-
-	--hoverColor: #045ffd;
-	--darkred: #782c2c;
-	--gray: #475366;
-	--bluegray: #2c4978;
 }
 
 * {
@@ -40,15 +39,13 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: #fff;
+  color: var(--white);
   padding: 0 1.5rem;
 }
 
 nav a:hover {
   color: #045ffd;
 }
-
-
 
 .modal {
 	position: fixed;
@@ -136,33 +133,6 @@ nav a:hover {
 	width: 80%;
 }
 
-.form-validation.error {
-	margin-bottom: 1.5rem;
-	position: relative;
-	border: 1px solid var(--errorColor);
-	border-radius: 2px;
-}
-
-.form-validation.valid {
-	margin-bottom: 0.5rem;
-	position: relative;
-	border: 1px solid var(--validColor);
-	border-radius: 2px;
-}
-
-.form-validation p {
-	font-size: 0.7rem;
-	margin-top: 0.5rem;
-	color: var(--errorColor);
-	position: absolute;
-	top: 1.8rem;
-	display: none;
-}
-
-.form-validation.error p {
-	display: block;
-}
-
 .modal-input {
 	display: block;
 	padding-left: 0.5rem;
@@ -203,6 +173,7 @@ nav a:hover {
 	text-align: center;
 }
 
+// For smaller screens like phones
 @media screen and (max-width: 768px) {
 	.modal-content-left {
 		display: none;
