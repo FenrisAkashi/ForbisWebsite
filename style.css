@@ -71,6 +71,18 @@ nav a:hover {
   align-items: center;
 }
 
+.captcha, #captcha-form {
+    text-align: center;
+    margin: auto;
+}
+
+.captcha .preview {
+    border: 1px dashed #888;
+    height: 30px;
+    line-height: 30px;
+    letter-spacing: 8px;
+}
+
 .column-center {
   display: flex;
   flex-direction: column;
@@ -101,7 +113,7 @@ nav a:hover {
   color: white;
 }
 
-button {
+.quote-btn, .call-btn {
   padding: 1rem 3rem;
   font-size: 1rem;
   border: none;
@@ -111,12 +123,12 @@ button {
   border-radius: 50px;
 }
 
-button a {
+.quote-btn a, .call-btn a {
   text-decoration: none;
   color: white;
 }
 
-button a:hover {
+.quote-btn a:hover, .call-btn a:hover {
   color: #045ffd;
 }
 
@@ -131,7 +143,7 @@ button a:hover {
   color: #045ffd;
 }
 
-button:hover {
+.quote-btn:hover, .call-btn:hover {
   color: #045ffd;
 }
 
