@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forbis</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
+    <script src="https://kit.fontawesome.com/1a7af24cab.js" crossorigin="anonymous"></script>
+</head>
   <body>
       <nav>
           <div class="logo"> </div>
@@ -60,11 +61,22 @@
                     <div class="form-validation">
                       <textarea name="message" class="modal-input" id="message" rows="5" cols="20" placeholder="How can we help you?" required></textarea>
                     </div>
+                    <div class="captcha">
+                        <label for="captcha-input">Enter Captcha</label><br><br>
+                        <div class="preview"></div>
+                        <div class="captcha-form">
+                            <input type="text" id="captcha-form" placeholder="Enter captcha text" >
+                                <button class="captcha-refresh">
+                                    <i class="fa fa-refresh"></i>
+                                </button>
+                        </div>
+                    </div>
                     <br>
                     <input type="submit" class="modal-input-btn" value="Send Message">
                     <input type="hidden" name="_subject" value="new message!">
                     <input type="hidden" name="_next" value="https://forbisautodetail.com/thankyou">
                     <input type="hidden" name="_captcha" value="false">
+                    <input type="text" name="_honey" style="display:none">
                   </form>
               </div>
           </div>
@@ -91,6 +103,40 @@
             }
         });
 
+      </script>
+
+      <script>
+          (function () {
+              const fonts = ["cursive", "sans-serif", "serif", "monospace"];
+              let captchaValue = "";
+              function generateCaptcha() {
+                  let value = btoa(Math.random() * 1000000000);
+                  value = value.substr(0, 5 + Math.random() * 5);
+                  captchaValue = value;
+              }
+              function setCaptcha() {
+                  let html = captchaValue.split("").map((char) => {
+                      const rotate = -20 + Math.trunc(Math.random() * 30);
+                      const font = Math.trunc(Math.random() * fonts.length);
+                      return `<span
+                        style="
+                            transform:rotate(${rotate}deg);
+                            font-family:${fonts[font]}
+                        "
+                      >${char}</span>`;
+                  }).join("");
+                  document.querySelector(".captcha .preview").innerHTML = html;
+              }
+              function initCaptcha() {
+                  document.querySelector(".captcha .captcha-refresh").addEventListener("click", function () {
+                      generateCaptcha();
+                      setCaptcha();
+                  });
+                  generateCaptcha();
+                  setCaptcha();
+              }
+              initCaptcha();
+          })();
       </script>
 
   </body>
