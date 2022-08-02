@@ -4,6 +4,7 @@
 His Facebook page: https://www.facebook.com/ForbiisAutoDetail
 
 Resize images at: https://resizeimage.net/
+	update: this site not working today 8/1/22. Switched to adobe free img resizer: https://www.adobe.com/express/feature/image/resize
 
 reviews.html: Google reviews embeded using elfsight. 
 
