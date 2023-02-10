@@ -45,6 +45,7 @@ Once it's online, try adding this line to the head section of the page:
 Then add this at the end of (inside of) the body section:
 <!--script type="text/javascript" src="app.js"></script-->
 
+2/9/23: Found out that zooming in and out on phone messes up how it displays, at least on chrome. White space shows on the right side only after zooming in and then out again.
 
 
 Browser Checklist:
