@@ -21,8 +21,6 @@ Reviews page info:
 Google ID: ChIJQYVoDrqllVQRhWQ3AqC7j-8
 
 Elfsight - $60/year (was able to get a coupon for first payment, set on auto renewal w/his card)
-username: forbistemp
-password: yrjC(Nh&&WlzL&#5 
 
 Gave me this code to embed in my html:
 <script src="https://apps.elfsight.com/p/platform.js" defer></script>
@@ -30,20 +28,6 @@ Gave me this code to embed in my html:
 
 If he ever wants to switch to having a button linked to google reviews for free, the direct url to the google reviews wanted:
 https://search.google.com/local/reviews?placeid=ChIJQYVoDrqllVQRhWQ3AqC7j-8
-
-
-
-Separate JS file issues:
-Didn't try to do this...
-
-Wanted to make a separate app.js file for the script but it would no longer work.
-Feeling like this may only work once the website is up and running, and for now need to have the script on each page it's needed.
-
-Once it's online, try adding this line to the head section of the page:
-<!--script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script-->
-
-Then add this at the end of (inside of) the body section:
-<!--script type="text/javascript" src="app.js"></script-->
 
 2/9/23: Found out that zooming in and out on phone messes up how it displays, at least on chrome. White space shows on the right side only after zooming in and then out again.
 
